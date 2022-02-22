@@ -1,0 +1,21 @@
+Fonction Suivant(Entrée: word, Sortie: result)	
+	si word != dernierMot
+		result = word
+		
+		i = k
+		Tant que result[i] == derniereLettre
+			result[i] = premiereLettre
+			i--
+				
+		result[i] = succ(result[i])
+	sinon
+		result = premierMot
+
+Fonction Generateur()
+	word = premierMot
+	
+	Tant que word != dernierMot
+		afficherMot(word)
+		word = Suivant(word)
+	
+	afficherMot(word)

@@ -1,0 +1,10 @@
+fonction is_prime(n):
+	si n <= 1:
+		Retourner FAUX
+	sinon si n == 2 ou n % 2 != 0 ou n < sqrt(n):
+		Retourner VRAI
+	sinon:
+		Pour i allant de 3 à n - 1:
+			si n % i == 0:
+				Retourner FAUX
+		Retourner VRAI

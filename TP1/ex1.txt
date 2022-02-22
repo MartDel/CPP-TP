@@ -1,0 +1,14 @@
+T = [10, 8, 9, 11, 11, 3, 2, 0, 5, 7, 15, 20, 6, 13]
+deb, long = 0
+
+i = 1
+Tant que i <= taille(T)
+	j = i
+	Tant que j <= taille(T) et T[j] >= T[j+1]
+		j++
+	si j - i > long
+		deb = i
+		long = j - i
+	i = j + 1
+
+Afficher deb et long
