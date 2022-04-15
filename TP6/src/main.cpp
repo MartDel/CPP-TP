@@ -1,13 +1,17 @@
-#include "header.hpp"
+#include "../headers/header.hpp"
 
 int main() {
-    array<array<size_t, MAT_SIZE>, MAT_SIZE> mat = getMat();
+    srand(time(NULL));
 
-    printMat(mat);
+    for (size_t i = 1; i <= 12; i++) {
+        cout << "------------------ TOUR " << i << "------------------" << endl;
+        array<array<size_t, MAT_SIZE>, MAT_SIZE> mat = getMat();
 
-    cout << endl;
+        printMat(mat);
+        cout << endl;
 
-    cout << fordFulkerson(mat, 0, MAT_SIZE-1);
+        cout << "Flot max : " << fordFulkerson(mat, 0, MAT_SIZE - 1) << endl << endl;
+    }
 
     return 0;
 }
